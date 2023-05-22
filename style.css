@@ -1,0 +1,98 @@
+* {
+    font-family: 'Open Sans',sans-serif;
+}
+
+body {
+    background-color: #C0DEFF;
+}
+
+.container {
+    width: 320px;
+    height: 500px;
+    background-color: white;
+    margin: 20px auto;
+    top: 20px;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);	
+}
+
+table {
+    width: 100%;
+    border-color: #f4f4f4;
+}
+
+td {
+    width: 25%;
+    
+}
+
+button {
+    margin: 10px;
+    font-size: 24px;
+    background-color: white;
+    border: none;
+    border-collapse: collapse;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#ac {
+    border: solid 1px black;
+    width: 60px;
+    height: 60px;
+}
+
+#ac:hover {
+    background-color: rgb(161, 148, 148);
+    transition: 0.8s;
+}
+
+.bagi {
+    width: 50px;
+    height: 50px;
+    background-color: #FF8787;
+    font-weight: bold; 
+}
+
+.kali {
+    width: 50px;
+    height: 50px;
+    background-color: #F8C4B4;
+    font-weight: bold; 
+}
+
+.kurang {
+    width: 50px;
+    height: 50px;
+    background-color: #E5EBB2;
+    font-weight: bold; 
+}
+
+.tambah {
+    width: 50px;
+    height: 50px;
+    background-color: #BCE29E;
+    font-weight: bold; 
+}
+
+.hasil {
+    width: 50px;
+    height: 50px;
+    background-color: #9477af;
+    font-weight: bold; 
+}
+
+#inputLabel {
+    height: 80px;
+    font-size: 40px;
+    vertical-align: bottom;
+    text-align: right;
+    padding-right: 16px;
+    background-color: #ececec;
+    border-radius: 5px;
+    border: solid 1px rgb(73, 72, 72);
+    width: 100%;
+    overflow-x: hidden;
+}
+
