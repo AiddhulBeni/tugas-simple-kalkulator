@@ -13,7 +13,7 @@ body {
     margin: 20px auto;
     top: 20px;
     position: relative;
-    border-radius: 5px;
+    border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);	
 }
 
@@ -94,7 +94,7 @@ button {
     text-align: right;
     padding-right: 16px;
     background-color: #ececec;
-    border-radius: 5px;
+    border-radius: 20px 20px 0 0;
     border: .5px solid rgb(207, 198, 198);
     position: relative;
 }
