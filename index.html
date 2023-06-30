@@ -1,68 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simpel Calculator Beni</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="container">
-        <table>
-            <tr>
-                <td colspan="4" id="inputLabel">0</td>
-            </tr>
-            <tr>
-                <td colspan="3"><button onclick="pushBtn(this);" id="ac">AC</button></td>
-                <td><button onclick="pushBtn(this);" class="bagi">÷</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="pushBtn(this);">7</button></td>
-                <td><button onclick="pushBtn(this);">8</button></td>
-                <td><button onclick="pushBtn(this);">9</button></td>
-                <td><button onclick="pushBtn(this);" class="kali">×</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="pushBtn(this);">4</button></td>
-                <td><button onclick="pushBtn(this);">5</button></td>
-                <td><button onclick="pushBtn(this);">6</button></td>
-                <td><button onclick="pushBtn(this);" class="kurang">-</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="pushBtn(this);">1</button></td>
-                <td><button onclick="pushBtn(this);">2</button></td>
-                <td><button onclick="pushBtn(this);">3</button></td>
-                <td><button onclick="pushBtn(this);" class="tambah">+</button></td>
-            </tr>
-            <tr>
-                <td colspan="2" align="center"><button onclick="pushBtn(this);">0</button></td>
-                <td><button onclick="pushBtn(this);">.</button></td>
-                <td><button onclick="pushBtn(this);" class="hasil">=</button></td>
-            </tr>
-        </table>
+      <table>
+        <tr class="screen">
+          <td colspan="4" id="inputLabel">0</td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <button onclick="pushBtn(this);" id="ac">AC</button>
+          </td>
+          <td><button onclick="pushBtn(this);" class="bagi">÷</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="pushBtn(this);">7</button></td>
+          <td><button onclick="pushBtn(this);">8</button></td>
+          <td><button onclick="pushBtn(this);">9</button></td>
+          <td><button onclick="pushBtn(this);" class="kali">×</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="pushBtn(this);">4</button></td>
+          <td><button onclick="pushBtn(this);">5</button></td>
+          <td><button onclick="pushBtn(this);">6</button></td>
+          <td><button onclick="pushBtn(this);" class="kurang">-</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="pushBtn(this);">1</button></td>
+          <td><button onclick="pushBtn(this);">2</button></td>
+          <td><button onclick="pushBtn(this);">3</button></td>
+          <td><button onclick="pushBtn(this);" class="tambah">+</button></td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center">
+            <button onclick="pushBtn(this);">0</button>
+          </td>
+          <td><button onclick="pushBtn(this);">.</button></td>
+          <td><button onclick="pushBtn(this);" class="hasil">=</button></td>
+        </tr>
+      </table>
     </div>
     <script>
-        var inputLabel = document.getElementById('inputLabel');
+      let inputLabel = document.getElementById("inputLabel");
 
-        function pushBtn(obj) {
+      function pushBtn(obj) {
+        let pushed = obj.innerHTML;
 
-            var pushed = obj.innerHTML;
-
-            if (pushed == '=') {
-                inputLabel.innerHTML = eval(inputLabel.innerHTML);
-            }
-            else if (pushed == 'AC') {
-                inputLabel.innerHTML = '0';
-            }
-            else {
-                if (inputLabel.innerHTML == '0') {
-                    inputLabel.innerHTML = pushed;
-                } else {
-                    inputLabel.innerHTML += pushed;
-                }
-            }
+        if (pushed == "=") {
+          inputLabel.innerHTML = eval(inputLabel.innerHTML);
+        } else if (pushed == "AC") {
+          inputLabel.innerHTML = "0";
+        } else {
+          if (inputLabel.innerHTML == "0") {
+            inputLabel.innerHTML = pushed;
+          } else {
+            inputLabel.innerHTML += pushed;
+          }
         }
+
+        inputLabel.style.fontSize = "40px";
+        while (inputLabel.scrollWidth > inputLabel.clientWidth) {
+          let fontSize = parseFloat(
+            window.getComputedStyle(inputLabel).fontSize
+          );
+          inputLabel.style.fontSize = fontSize - 1 + "px";
+        }
+      }
     </script>
-</body>
+  </body>
 </html>
