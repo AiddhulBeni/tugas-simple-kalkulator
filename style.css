@@ -4,6 +4,7 @@
 
 body {
     background-color: #C0DEFF;
+    box-sizing: border-box;
 }
 
 .container {
@@ -30,7 +31,10 @@ body {
     border-radius: 20px ;
     border: .5px solid rgb(207, 198, 198);
     position: relative;
+    padding-bottom: 10px;
 }
+
+
 
 .screen{
     overflow: hidden;

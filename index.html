@@ -71,9 +71,7 @@
 
         inputLabel.style.fontSize = "40px";
         while (inputLabel.scrollWidth > inputLabel.clientWidth) {
-          let fontSize = parseFloat(
-            window.getComputedStyle(inputLabel).fontSize
-          );
+          let fontSize = parseFloat(window.getComputedStyle(inputLabel).fontSize);
           inputLabel.style.fontSize = fontSize - 1 + "px";
         }
       }
